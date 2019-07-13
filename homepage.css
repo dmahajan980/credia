@@ -48,10 +48,91 @@
     font-family: 'Montserrat';
 }
 
+
 body {
     margin: 0;
     background: #FFFFFF;
 }
+
+/* BORDERLINE */
+
+.form-page{
+    z-index: 3;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: all 500ms ease;
+    display: none;
+}
+
+.form-page div {
+    background-color: #C5DF16;
+    height: 20vw;
+    width: 47vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.headline-form {
+    font-size: 3vw;
+    color: white;
+    margin-top: 0;
+}
+
+form .number, form .otp, form .finish {
+    box-sizing: border-box;
+    background: white;
+    height: 4vw;
+    width: 27vw;
+    flex-direction: row;
+    border-radius: 4px;
+    transition: all 500ms ease;
+}
+
+form .number, form .otp {
+    justify-content: space-between;
+}
+
+form .finish {
+    justify-content: center;
+    cursor: pointer;
+}
+
+.number i, .otp i, .finish i {
+    padding: 1vw;
+    cursor: pointer;
+}
+
+.number input, .otp input {
+    border: 0;
+    background: none;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 100%;
+    width: 80%;
+    outline: none;
+    line-height: 1.85vw;
+    font-size: 1.29vw;
+    letter-spacing: 1px;
+}
+
+form div.inactive {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+form div.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* BORDERLINE */
 
 .intro {
     display: grid;
@@ -195,6 +276,7 @@ button {
     border: 0;
     cursor: pointer;
     color: white;
+    outline: none;
 }
 
 button p {
