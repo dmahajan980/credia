@@ -20,6 +20,7 @@ let nextSlide = (parent, nextForm) => {
 }
 
 let animate = () => {
+    let counter = 0;
     const arrows = document.querySelectorAll(".fa-arrow-down");
     arrows.forEach(arrow => {
         arrow.addEventListener('click', () => {
@@ -30,6 +31,10 @@ let animate = () => {
             if (validateNo(input.value)) {
                 console.log('good');
                 nextSlide(parent, nextForm);
+                counter++;
+                if (counter === 2) {
+                    document.querySelector(".headline-form").innerHTML = 'Cheers!';
+                }
             }
             else {
                 console.log('error');

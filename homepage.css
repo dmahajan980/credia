@@ -82,6 +82,7 @@ body {
     font-size: 3vw;
     color: white;
     margin-top: 0;
+    transition: all 500ms ease;
 }
 
 form .number, form .otp, form .finish {
