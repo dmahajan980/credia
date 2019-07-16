@@ -54,7 +54,7 @@ body {
     background: #FFFFFF;
 }
 
-/* BORDERLINE */
+/* Form Start */
 
 .form-page{
     z-index: 3;
@@ -133,17 +133,17 @@ form div.active {
     pointer-events: all;
 }
 
-/* BORDERLINE */
+/* Form end */
 
 .intro {
     display: grid;
-    grid-template-rows: 6.944vw 3.333vw 4.861vw 4.097vw 1.111vw 2.569vw 6.389vw 9vw 3.3vw 7.8vw 5.2vw 4.444vw 8.194vw;
+    grid-template-rows: 6.944vw 3.333vw 4.861vw 18vw 6.389vw 11vw 4.9vw 7.8vw 4.6vw 4.444vw 8.194vw;
     grid-template-columns: 8.13vw 35.33vw 3.43vw 11.88vw 40.08vw;
     margin: 0;
 }
 
 .image-container {
-    grid-row: 1/14;
+    grid-row: 1/12;
     grid-column: 5/6;
     display: flex;
     align-items: center;
@@ -156,9 +156,14 @@ form div.active {
     width: 60%;
 }
 
-.logo {
+.header {
     grid-row: 2/3;
-    grid-column: 2/3;
+    grid-column: 2/5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
     display: flex;
     align-items: center;
 }
@@ -186,32 +191,41 @@ nav {
     padding: auto;
     display: flex;
     align-items: center;
+    margin-right: 5vw;
 }
 
 nav a {
     font-weight: 500;
 }
 
-.title, .subtitle, .main-content, .contact-info, button, .box {
+div .headings, .subtitle, .main-content, .contact-info, button, .box {
     grid-column: 2/3;
 }
 
-.title {
+div .headings {
     grid-row: 4/5;
+}
+
+div .title {
     font-size: 3.45vw;
     margin-top: 0;
+    margin-bottom: 2vw;
     font-weight: 800;
 }
 
-.subtitle, .title-two, .title-three {
+div .subtitle, .title-two, .title-three {
     font-size: 2.3vw;
     margin-top: 0;
     font-weight: 650;
-    color: #0C4E8C;
 }
 
+div .subtitle, .title-two {
+    color: #0C4E8C;
+ }
+
 .subtitle {
-    grid-row: 6/7;
+    /* grid-row: 6/7; */
+    margin-bottom: 0;
 }
 
 .box div, .box-two div, .box-three div {
@@ -224,7 +238,7 @@ nav a {
 
 .box {
     display: flex;
-    grid-row: 7/8;
+    grid-row: 5/6;
     align-items: center;
 }
 
@@ -239,21 +253,20 @@ nav a {
 }
 
 .main-content {
-    grid-row: 8/9;
-    line-height: 1.85vw;
+    grid-row: 6/7;
+    line-height: 2.1vw;
     font-size: 1.29vw;
     margin-top: 0;
 }
 
 .contact-info {
-    grid-row: 10/11;
+    grid-row: 8/9;
 }
 
 .contact-info .line {
     margin-top: 0.25vw;
     font-size: 1.29vw;
     line-height: 1.85vw;
-    color: #C4C4C4;
     font-weight: 600;
 }
 
@@ -261,11 +274,12 @@ nav a {
     font-size: 2.1vw;
     font-weight: 580;
     margin-top: 1.8vw;
+    color: rgba(36, 36, 36, 0.56);
 }
 
 button {
     width: 60%;
-    grid-row: 12/13;
+    grid-row: 10/11;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -316,6 +330,7 @@ button svg {
     display: grid;
     grid-template-columns: 15.92vw 30.55vw 5.56vw 30.55vw 15.92vw;
     grid-template-rows: 23vw 21.9vw 9.8vw 21.9vw 9.8vw 21.9vw;
+    margin-bottom: 23vw;
 }
 
 /*.textbox {
@@ -324,15 +339,16 @@ button svg {
     justify-content: center;
 }*/
 
-.textbox h4 {
-    line-height: 1.85vw;
+.textbox .title-line {
+    line-height: 2.1vw;
     font-size: 1.4vw;
     margin-bottom: 1vw;
     margin-top: 4vw;
+    font-weight: bold;
 }
 
-.textbox p {
-    line-height: 1.85vw;
+.textbox .content-line {
+    line-height: 2.1vw;
     font-size: 1.29vw;
     margin-top: 0;
 }
@@ -352,6 +368,16 @@ button svg {
     grid-column: 2/3;
 }
 
+.lower {
+    padding-bottom: 9vw;
+    background: #0C4E8C;
+    color: white;
+}
+
+h3.title-three {
+    color: white;
+}
+
 .team-description p {
     margin: 0 15.92vw 3vw 15.92vw;
     line-height: 1.85vw;
@@ -359,8 +385,179 @@ button svg {
 }
 
 footer {
-    margin-top: 10vw;
+    /* margin-top: 10vw; */
     width: 100%;
-    height: 20vw;
-    background: #0C4E8C;
+    background: #C5DF16;
+}
+
+footer p {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@media only screen and (max-device-width: 600px) {
+    .intro, .header, .middle {
+        display: flex;
+    }
+
+    .intro, .header {
+        width: 100%;
+    }
+
+    .intro, .middle {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header {
+        height: 15.6vw;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo a, nav a {
+        font-size: 3.9vw;
+    }
+
+    nav {
+        margin-right: 4.5vw;
+    }
+
+    .logo img {
+        height: 6.7vw;
+        width: 6.7vw;
+        margin-left: 4.5vw;
+    }
+
+    .headings .title, .headings .subtitle, .main-content,
+    .middle  {
+        margin: 0 6.95vw 8.4vw 6.95vw;
+    }
+
+    .headings .title {
+        margin-top: 7.2vw;
+        margin-bottom: 3.9vw;
+        font-size: 6.7vw;
+        font-weight: 700;
+    }
+
+    .headings .subtitle, .title-box-two .title-two, .title-three {
+        font-size: 5vw;
+        margin-bottom: 7vw;
+    }
+
+    .intro .box {
+        display: none;
+    }
+
+    .main-content {
+        font-size: 2.2vw;
+        line-height: 6.95vw;
+        word-spacing: 1px;
+    }
+
+    .image-container {
+        width: 100%;
+        margin-top: 2vw;
+        margin-bottom: 13.4vw;
+    }
+
+    .contact-info .line {
+        font-size: 4.42vw;
+        margin-bottom:  5vw;
+    }
+
+    .contact-info .number {
+        font-size: 6.7vw;
+        text-align: center;
+    }
+
+    button {
+        width: 65.27vw;
+        height: 14.5vw;
+        justify-content: center;
+    }
+
+    button p {
+        font-weight: bold;
+        font-size: 4.1vw;
+    }
+
+    button svg {
+        height: 4.4vw;
+        width: 5.1vw;
+        margin-left: 3.1vw;
+    }
+
+    .middle {
+        margin-top: 25vw;
+    }
+
+    .title-box-two .title-two {
+        text-align: center;
+        line-height: 6.7vw;
+    }
+
+    .box-two, .box-three {
+        margin-top: 1.3vw;
+        height: 2vw;
+        width: 8vw;
+        background-color: #C5DF16;
+    }
+
+    .box-two .b-two {
+        background-color: #FFFFFF;
+    }
+
+    .box-three .b-three {
+        background-color: #0C4E8C;
+    }
+
+    .textbox {
+        margin-top: 25vw;
+    }
+
+    .textbox .title-line, .textbox p {
+        opacity: 0.6;
+        line-height: 6.7vw;
+    }
+
+    .textbox .title-line {
+        font-size: 3vw;
+    }
+
+    .textbox .content-line {
+        margin-top: 4.16vw;
+        font-size: 2.2vw;
+        line-height: 7.1vw;
+    }
+
+    .lower {
+        margin-top: 25vw;
+    }
+
+    .title-box-three {
+        padding-top: 10vw;
+        margin-bottom: 9vw;
+    }
+
+
+    .team-description p {
+        margin-top: 4.16vw;
+        font-size: 1.6vw;
+        line-height: 7.1vw;
+        margin: 0 6.95vw 8.4vw 6.95vw;
+    }
+
+    footer p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.7vw;
+        height: 7.8vw;
+    }
 }
