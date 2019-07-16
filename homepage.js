@@ -52,9 +52,9 @@ let closeForm = () => {
 
 let openForm = () => {
     let formBtn = document.querySelector(".signup-button");
-    formBtn.addEventListener('click', () => {
+    setTimeout(formBtn.addEventListener('click', () => {
         document.querySelector(".form-page").style.display = 'flex';
-    })
+    }), 500);
 }
 
 animate();

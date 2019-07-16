@@ -401,6 +401,34 @@ footer p {
 }
 
 @media only screen and (max-device-width: 600px) {
+    .form-page .form-box {
+        height: 100%;
+        width: 100%;
+    }
+
+    .form-box p {
+        font-size: 9vw;
+    }
+
+    form .number, form .otp, form .finish {
+        height: 10vw;
+        width: 71vw;
+        font-size: 4vw;
+    }
+
+    .number i, .otp i, .finish i {
+        padding: 3vw;
+    }
+
+    .number input, .otp input {
+        font-size: 4.1vw;
+        letter-spacing: 4px;
+    }
+
+    .finish p {
+        font-size: 5vw;
+    }
+
     .intro, .header, .middle {
         display: flex;
     }
