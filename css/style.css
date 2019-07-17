@@ -399,11 +399,11 @@ footer {
 }
 
 footer p {
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin: 0 auto;
     text-align: center;
-    font-size: 1vw;
+    font-size: 0.8vw;
     font-weight: 600;
     letter-spacing: 1px;
 }
