@@ -232,8 +232,15 @@ div .subtitle, .title-two {
     padding: 3px 10px;
     height: 1px;
     width: 2px;
-    margin-bottom: 1.38vw;
     background-color: #C5DF16;
+}
+
+.box div {
+    margin-bottom: 2.8vw;
+}
+
+.box-two div, .box-three div {
+    margin-bottom: 1.38vw;
 }
 
 .box {
@@ -244,12 +251,12 @@ div .subtitle, .title-two {
 
 .box-two .b-two {
     position: relative;
-    top: 6.7vw;
+    top: 1.7vw;
 }
 
 .box-three .b-three {
     position: relative;
-    top: 6.7vw;
+    /* top: 1.7vw; */
 }
 
 .main-content {
@@ -318,7 +325,7 @@ button svg {
 }
 
 .title-box-three {
-    height: 23vw;
+    height: 18vw;
 }
 
 .title-box-two .title-two {
@@ -369,7 +376,8 @@ button svg {
 }
 
 .lower {
-    padding-bottom: 9vw;
+    padding-bottom: 5.5vw;
+    padding-top: 2vw;
     background: #0C4E8C;
     color: white;
 }
@@ -444,7 +452,7 @@ footer p {
     
     .header {
         height: 15.6vw;
-        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
     }
 
     .logo a, nav a {
@@ -538,12 +546,13 @@ footer p {
     }
 
     .box-two .b-two {
-        background-color: #FFFFFF;
+        /* background-color: #FFFFFF; */
+        opacity: 0;
     }
 
-    .box-three .b-three {
+    /* .box-three .b-three {
         background-color: #0C4E8C;
-    }
+    } */
 
     .textbox {
         margin-top: 25vw;
