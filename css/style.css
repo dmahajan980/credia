@@ -64,6 +64,10 @@
     background: #555; 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background: #FFFFFF;
@@ -290,6 +294,7 @@ div .subtitle, .title-two {
     line-height: 1.95vw;
     font-size: 1.29vw;
     margin-top: 0;
+    text-align: justify;
 }
 
 .contact-info {
@@ -508,13 +513,13 @@ footer p {
     }
 
     nav {
-        margin-right: 4.5vw;
+        margin-right: 6.95vw;
     }
 
     .logo img {
         height: 6.7vw;
         width: 6.7vw;
-        margin-left: 4.5vw;
+        margin-left: 6.95vw;
     }
 
     .headings .title, .headings .subtitle, .main-content,
@@ -623,12 +628,14 @@ footer p {
 
     .textbox .title-line {
         font-size: 3vw;
+        text-align: justify;
     }
 
     .textbox .content-line {
         margin-top: 4.16vw;
         font-size: 2.2vw;
         line-height: 7.1vw;
+        text-align: justify;
     }
 
     .lower {
@@ -646,6 +653,7 @@ footer p {
         font-size: 1.6vw;
         line-height: 7.1vw;
         margin: 0 6.95vw 8.4vw 6.95vw;
+        text-align: justify;
     }
 
     footer p {
