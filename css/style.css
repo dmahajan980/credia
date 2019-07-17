@@ -48,6 +48,21 @@
     font-family: 'Montserrat';
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
 
 body {
     margin: 0;
@@ -140,7 +155,7 @@ form div.active {
     /* grid-template-rows: 6.944vw 3.333vw 4.861vw 18vw 6.389vw 11vw 4.9vw 7.8vw 4.6vw 4.444vw 8.194vw; */
     grid-template-rows: 3.2vw 3.333vw 3vw 7vw 5.5vw 10vw 1.8vw 7vw 1.8vw 4.444vw 5vw;
     /* grid-template-columns: 8.13vw 37.76vw 3vw 11.88vw 38.08vw; */
-    grid-template-columns: 6.13vw 40.76vw 3vw 11.88vw 38.08vw;
+    grid-template-columns: 6.1vw 40.7vw 3.5vw 11.2vw 37.2vw;
     margin: 0;
 }
 
@@ -150,7 +165,8 @@ form div.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #C5DF16;
+    background-image: url(../img/Group\ 3.svg);
+    background-size: 100% 100%;
 }
 
 .image-container img {
@@ -335,7 +351,7 @@ button svg {
 }
 
 .title-box-three {
-    height: 18vw;
+    height: 15vw;
 }
 
 .title-box-two .title-two {
@@ -346,8 +362,8 @@ button svg {
 .middle {
     display: grid;
     grid-template-columns: 15.92vw 30.55vw 5.56vw 30.55vw 15.92vw;
-    grid-template-rows: 23vw 21.9vw 9.8vw 21.9vw 9.8vw 21.9vw;
-    margin-bottom: 23vw;
+    grid-template-rows: 19vw 21.9vw 6.8vw 21.9vw 6.8vw 21.9vw;
+    margin-bottom: 18vw;
 }
 
 /*.textbox {
@@ -360,7 +376,7 @@ button svg {
     line-height: 2.1vw;
     font-size: 1.4vw;
     margin-bottom: 1vw;
-    margin-top: 4vw;
+    margin-top: 2vw;
     font-weight: bold;
 }
 
@@ -368,6 +384,28 @@ button svg {
     line-height: 2.1vw;
     font-size: 1.29vw;
     margin-top: 0;
+}
+
+#image-one {
+    grid-row: 2/3;
+    grid-column: 4/5;
+    height: 21.9vw;
+    width: 30.55vw;
+}
+
+#image-two {
+    grid-row: 4/5;
+    grid-column: 2/3;
+    height: 21.9vw;
+    width: 30.55vw;
+}
+
+#image-three {
+    grid-row: 6/7;
+    grid-column: 4/5;
+    margin-top: 2vw;
+    height: 21.9vw;
+    width: 30.55vw;
 }
 
 #textbox-one {
@@ -386,7 +424,7 @@ button svg {
 }
 
 .lower {
-    padding-bottom: 5.5vw;
+    padding-bottom: 4.5vw;
     padding-top: 2vw;
     background: #0C4E8C;
     color: white;
@@ -510,6 +548,7 @@ footer p {
         width: 100%;
         margin-top: 2vw;
         margin-bottom: 13.4vw;
+        background-size: 100% 145%;
     }
 
     .contact-info .line {
@@ -565,7 +604,16 @@ footer p {
     } */
 
     .textbox {
+        margin-top: 4vw;
+    }
+
+    .imagebox, #image-three {
         margin-top: 25vw;
+    }
+
+    #image-one, #image-two, #image-three  {
+        width: 95%;
+        height: auto;
     }
 
     .textbox .title-line, .textbox p {
