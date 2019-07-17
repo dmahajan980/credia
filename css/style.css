@@ -137,8 +137,10 @@ form div.active {
 
 .intro {
     display: grid;
-    grid-template-rows: 6.944vw 3.333vw 4.861vw 18vw 6.389vw 11vw 4.9vw 7.8vw 4.6vw 4.444vw 8.194vw;
-    grid-template-columns: 8.13vw 35.33vw 3.43vw 11.88vw 40.08vw;
+    /* grid-template-rows: 6.944vw 3.333vw 4.861vw 18vw 6.389vw 11vw 4.9vw 7.8vw 4.6vw 4.444vw 8.194vw; */
+    grid-template-rows: 3.2vw 3.333vw 3vw 7vw 5.5vw 10vw 1.8vw 7vw 1.8vw 4.444vw 5vw;
+    /* grid-template-columns: 8.13vw 37.76vw 3vw 11.88vw 38.08vw; */
+    grid-template-columns: 6.13vw 40.76vw 3vw 11.88vw 38.08vw;
     margin: 0;
 }
 
@@ -207,16 +209,24 @@ div .headings {
 }
 
 div .title {
-    font-size: 3.45vw;
+    /* font-size: 3.45vw; */
+    font-size: 3.35vw;
     margin-top: 0;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
     font-weight: 800;
 }
 
 div .subtitle, .title-two, .title-three {
-    font-size: 2.3vw;
     margin-top: 0;
     font-weight: 650;
+}
+
+div .subtitle {
+    font-size: 2vw;
+}
+
+.title-two, .title-three {
+    font-size: 2.3vw;
 }
 
 div .subtitle, .title-two {
@@ -235,9 +245,9 @@ div .subtitle, .title-two {
     background-color: #C5DF16;
 }
 
-.box div {
+/* .box div {
     margin-bottom: 2.8vw;
-}
+} */
 
 .box-two div, .box-three div {
     margin-bottom: 1.38vw;
@@ -261,7 +271,7 @@ div .subtitle, .title-two {
 
 .main-content {
     grid-row: 6/7;
-    line-height: 2.1vw;
+    line-height: 1.95vw;
     font-size: 1.29vw;
     margin-top: 0;
 }
@@ -280,7 +290,7 @@ div .subtitle, .title-two {
 .contact-info .number {
     font-size: 2.1vw;
     font-weight: 580;
-    margin-top: 1.8vw;
+    margin-top: 0;
     color: rgba(36, 36, 36, 0.56);
 }
 
