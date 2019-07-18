@@ -454,8 +454,8 @@ footer p {
         width: 100%;
     }
 
-    .form-box p {
-        font-size: 9vw;
+    .form-box .headline-form {
+        font-size: 10vw;
     }
 
     .intro, .header, .middle {
