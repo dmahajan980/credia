@@ -37,14 +37,14 @@ function animate() {
         popUp();
     }
     else {
-        input.style.color = "rgb(255, 0, 0, 0.7)";
+        inputElement.style.color = "rgba(255, 0, 0, 0.7)";
         console.log("Invalid no!");
     }
 }
 
 const formatToPhone = (event) => {
 
-    // I am lazy and don't like to type things more than once
+    inputElement.style.color = "rgba(36, 36, 36, 0.56)";
     const target = event.target;
     // Strip everything except digits
     // First twelve digits of input including 91
