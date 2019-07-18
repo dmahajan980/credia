@@ -74,8 +74,17 @@ body {
 }
 
 /* Form Start */
+/* .background {
+    display: fixed;
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+    opacity: 0.7;
+    height: 100vh;
+    width: 100vw; 
+} */
 
 .form-page{
+    display: flex;
     z-index: 3;
     position: fixed;
     height: 100vh;
@@ -87,24 +96,32 @@ body {
     display: none;
 }
 
-.form-page div {
+@keyframes animatetop {
+    0% {opacity: 0}
+    40% {opacity: 1}
+    60% {opacity: 1}
+    100% {opacity: 0}
+}
+
+.form-page .form-box {
     background-color: #C5DF16;
-    height: 20vw;
+    height: 15vw;
     width: 47vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation-name: animatetop;
+    animation-duration: 2000ms;
 }
 
-.headline-form {
+.form-box .headline-form {
     font-size: 3vw;
     color: white;
-    margin-top: 0;
     transition: all 500ms ease;
 }
 
-form .number, form .otp, form .finish {
+.no {
     box-sizing: border-box;
     background: white;
     height: 4vw;
@@ -114,52 +131,29 @@ form .number, form .otp, form .finish {
     transition: all 500ms ease;
 }
 
-form .number, form .otp {
-    justify-content: space-between;
-}
-
-form .finish {
-    justify-content: center;
-    cursor: pointer;
-}
-
-.number i, .otp i, .finish i {
-    padding: 1vw;
-    cursor: pointer;
-}
-
-.number input, .otp input {
+.no input {
+    font-size: 2.1vw;
+    font-weight: 580;
+    margin-top: 0;
+    color: rgba(36, 36, 36, 0.56);
     border: 0;
     background: none;
     flex-grow: 1;
     flex-shrink: 1;
     height: 100%;
-    width: 80%;
+    width: 100%;
     outline: none;
     line-height: 1.85vw;
-    font-size: 1.29vw;
     letter-spacing: 1px;
+    
 }
-
-form div.inactive {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-}
-
-form div.active {
-    opacity: 1;
-    pointer-events: all;
-}
-
-/* Form end */
 
 .intro {
     display: grid;
     /* grid-template-rows: 6.944vw 3.333vw 4.861vw 18vw 6.389vw 11vw 4.9vw 7.8vw 4.6vw 4.444vw 8.194vw; */
     grid-template-rows: 3.2vw 3.333vw 3vw 7vw 5.5vw 10vw 1.8vw 7vw 1.8vw 4.444vw 5vw;
-    /* grid-template-columns: 8.13vw 37.76vw 3vw 11.88vw 38.08vw; */
-    grid-template-columns: 6.1vw 40.7vw 3.5vw 11.2vw 37.2vw;
+    /* grid-template-columns: 8.13vw 37.76vw 3vw 11.88vw 38.08vw; 37.2 */
+    grid-template-columns: 6.1vw 41.3vw 6vw 11.2vw 34.7vw;
     margin: 0;
 }
 
@@ -294,7 +288,6 @@ div .subtitle, .title-two {
     line-height: 1.95vw;
     font-size: 1.29vw;
     margin-top: 0;
-    text-align: justify;
 }
 
 .contact-info {
@@ -306,13 +299,7 @@ div .subtitle, .title-two {
     font-size: 1.29vw;
     line-height: 1.85vw;
     font-weight: 600;
-}
-
-.contact-info .number {
-    font-size: 2.1vw;
-    font-weight: 580;
-    margin-top: 0;
-    color: rgba(36, 36, 36, 0.56);
+    margin-bottom: 0.3vw;
 }
 
 button {
@@ -471,25 +458,6 @@ footer p {
         font-size: 9vw;
     }
 
-    form .number, form .otp, form .finish {
-        height: 10vw;
-        width: 71vw;
-        font-size: 4vw;
-    }
-
-    .number i, .otp i, .finish i {
-        padding: 3vw;
-    }
-
-    .number input, .otp input {
-        font-size: 4.1vw;
-        letter-spacing: 4px;
-    }
-
-    .finish p {
-        font-size: 5vw;
-    }
-
     .intro, .header, .middle {
         display: flex;
     }
@@ -547,6 +515,7 @@ footer p {
         font-size: 2.2vw;
         line-height: 6.95vw;
         word-spacing: 1px;
+        text-align: justify;
     }
 
     .image-container {
@@ -558,12 +527,23 @@ footer p {
 
     .contact-info .line {
         font-size: 4.42vw;
+        text-align: center;
+    }
+
+    .no {
+        box-sizing: border-box;
+        background: white;
+        height: 14.5vw;
+        width: 100%;
+        flex-direction: row;
+        border-radius: 4px;
         margin-bottom:  5vw;
     }
 
-    .contact-info .number {
+    .no input {
         font-size: 6.7vw;
         text-align: center;
+        margin-top: 1.5vw;
     }
 
     button {
