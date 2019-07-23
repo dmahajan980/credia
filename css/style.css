@@ -533,7 +533,11 @@ footer p {
         width: 100%;
         margin-top: 2vw;
         margin-bottom: 13.4vw;
-        background-size: 100% 145%;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        padding-top: 8vw;
+        padding-bottom: 8vw;
     }
 
     .contact-info .line {
